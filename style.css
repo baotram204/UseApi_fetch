@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+}
+
+h4 {
+    margin-top:8px ;
+}
+
+
+.css-add {
+    padding: 22px 8px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.css-font {
+    color: #fff;
+    font-size: 14px;
+}
+
+.css-font:hover {
+    background-color: rgb(31, 26, 26);
+    border-left: solid 2px aqua;
+    color: aqua;
+
+}
+
+.css-pad {
+    padding: 16px 8px;
+    letter-spacing: 0.5px;
+}
+
+.css_mar50 {
+    margin-top: 50px;
+    display: flex;
+}
+
+.css_marA {
+    margin: auto 0;
+    width: 200px;
+    padding-left: 10px;
+}
+
+.click {
+    border-left: solid 2px aqua;
+    background-color: #ccc;
+}
+
+.contai-input {
+    width: 100%;
+    padding: 8px 4px;
+    margin: 16px 0;
+}
+/*  */
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.header{
+    background-color:  #fff;
+    display: inline-block;
+    padding: 18px 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.frame {
+    background-color: #ccc;
+    display: flex;
+    min-height: 100vh;
+    height: 100%;
+    margin-top: 55px;
+}
+
+.dashboard {
+    background-color: rgba(53, 51, 51, 0.923);
+    flex-grow: 1;
+    position: fixed;
+    height: 100%;
+    width: 15%;
+}
+.creat {
+    display: flex;
+    text-align: center;
+    background-color: rgb(56, 155, 212);
+    padding: 4px 32px;
+    margin: auto;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.fa-xmark:hover,
+.creat:hover {
+    opacity: 0.7;
+}
+
+.table-list {
+    margin-left: 15%;
+    margin-right: 25%;
+    width: 60%;
+    height: 100%;
+}
+
+
+.find {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #fff;
+    width: calc(60% - 16px);
+    padding: 8px 8px;
+}
+
+.col {
+    display: flex;
+    position: fixed;
+    width: calc(60%);
+    background-color: #ccc;
+    height: 100px;
+    border-block-start: solid 16px #ccc ;
+    padding: 0 8px;
+}
+
+.list-user {
+    margin-top: 100px;
+}
+
+.users {
+    display: flex;
+    background-color: #fff;
+    padding: 16px 6px;
+    width: 100%;
+    border: solid 1px #ccc;
+}
+
+.users:hover {
+    background-color: #ccc;
+    border-left: solid 2px aqua ;
+
+}
+
+
+.render {
+    background-color: #fff;
+    flex-grow: 1;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    border-block-start: solid 16px #ccc ;
+
+}
+
+.title {
+    border-block-end: solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-pen {
+    padding: 4px;
+    cursor: pointer;
+}
+.fa-pen:hover {
+    opacity: 0.7;
+}
+
+.avt {
+    background: url('/src/imgs/5ca8a61b48d69288cbc7.jpg')  center / cover no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 6px;
+}
+.name {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.img {
+    /* background: url('/src/imgs/5ca8a61b48d69288cbc7.jpg')  center / cover no-repeat; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.content {
+    margin: 8px 16px;
+}
+
+/* pages creat new user */
+.overlay_1,
+.overlay_2  {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+@keyframes animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contai-ed,
+.container-crea-user {
+    background-color: rgb(56, 155, 212);;
+    position: fixed;
+    width: 500px;
+    margin: auto;
+    left: 0;
+    top: 10px;
+    right: 0;
+    animation: animation alternate 1s; 
+}
+
+.contai_header{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    font-size: 20px;
+}
+
+.open {
+    display: block;
+}
+
+.btn-submit {
+    width: 50%;
+    padding: 8px;
+}
+
+/* edit & delete */
+.deleteBtn {
+    padding: 4px 8px;
+    margin: 16px 0;
+}
+

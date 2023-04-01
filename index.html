@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>User manager</title>
+</head>
+    <body>
+        <!-- view -->
+        <div class="main">
+            <!-- header -->
+            <div class="header">User Manager</div>
+            <!-- container -->
+            <div class="frame">
+                <!-- dashboard -->
+                <div class="dashboard">
+                    <div class="css-add">
+                        <button class="creat">
+                            <i class="fa-solid fa-plus"></i>
+                            <p> New</p>
+                        </button>
+                    </div>
+                    
+                    <div class="Users css-font css-pad ">
+                        <i class="fa-solid fa-users"></i>
+                        Users
+                    </div>
+                    <div class="Roles css-font css-pad ">
+                        <i class="fa-solid fa-shield"></i>
+                        Roles
+                    </div>
+                    <div class="Rules css-font css-pad ">
+                        <i class="fa-solid fa-list-check"></i>
+                        Rules
+                    </div>
+                </div>
+    
+                <!-- table list -->
+                <div class="table-list">
+    
+                    <div class="">
+                        <div class="col">
+                            <div class="find css-pad">
+                                <p>Users</p>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="css_mar50">
+                                <div style="width: 56px; margin: auto;" ></div>
+                                <div class="css_marA" >Full Name</div>
+                                <div class="css_marA">Role</div>
+                                <div class="css_marA" >Email</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="css-pad list-user">
+                    </div>
+                      
+                </div>
+                
+    
+                <!-- render user -->
+                <div class="render css-pad">
+                    <div class="title css-pad">
+                        User Information
+                        <a><i class="fa-solid fa-pen"></i></a>
+                    </div>
+    
+                    <div class="infor">
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!-- code js -->
+        </div>
+        
+        <!-- create user -->
+        <div class="overlay_1">
+            <div class="container-crea-user css-pad">
+                <div class="contai_header">
+                    <h2 >Create New User</h2>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <form action="">
+                    <h4>Full Name</h4>
+                    <input type="text" class="contai-input" name="fullName" id="fullName">
+                    <h4>Role</h4>
+                    <input type="text" class="contai-input" name="role" id="role"> 
+                    <h4>Email</h4>
+                    <input type="email" class="contai-input" name="email" id="email">
+                    <h4>Slogan</h4>
+                    <input type="text" class="contai-input" name="slogan" id="slogan">
+                    <h4>Image</h4>
+                    <input type="file" class="contai-input" name="image" id="image">
+                    <br>
+                    <div class="css-add">
+                        <button class="btn-submit btn-ceate" type="button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--edit & delete -->
+        <div class="overlay_2">
+            <div class="contai-ed css-pad">
+                <div class="contai_header">
+                    <h2 >Edit User</h2>
+                    <i class="fa-solid fa-xmark exit2"></i>
+                </div>
+
+                <form action="">
+                    <h4>Full Name</h4>
+                    <input type="text" class="contai-input" name="fullName" id="fullName1">
+                    <h4>Role</h4>
+                    <input type="text" class="contai-input" name="role" id="role1"> 
+                    <h4>Email</h4>
+                    <input type="email" class="contai-input" name="email" id="email1">
+                    <h4>Slogan</h4>
+                    <input type="text" class="contai-input" name="slogan" id="slogan1">
+                    <h4>Image</h4>
+                    <input type="file" class="contai-input" name="image" id="image1">
+                    <br>
+                    <div class="css-add">
+                        <button class="btn-submit btn-update" type="button">Submit</button>
+                    </div>
+                </form>
+
+                <button class="deleteBtn">Delete user</button>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
