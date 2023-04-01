@@ -23,13 +23,10 @@ function listTableUsers(users) {
 }
 
 // render infor users
-function renderInfo (users) {
+function handleRenderInfo (users) {
     listUsers.onclick = (e) =>{
         // lấy thông tin khi click vào user
         userCurr = e.target.closest('.users')
-        console.log(userCurr)
-
-        
 
         var profile = users[userCurr.dataset.index]
 
@@ -198,6 +195,11 @@ function updateUser(data, id, callback) {
 }
 
 
+function handleFindUser() {
+    
+   
+}
+
    
 
 // call API 
@@ -229,7 +231,8 @@ function createUser(data, callback) {
 
 function start() {
     getUser(listTableUsers)
-    getUser(renderInfo)
+    getUser(handleRenderInfo)
+    handleFindUser()
     handleCreateForm()
     handleOption()
 }

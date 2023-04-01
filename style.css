@@ -120,19 +120,35 @@ h4 {
 
 .find {
     display: flex;
-    justify-content: space-between;
-    position: fixed;
     background-color: #fff;
-    width: calc(60% - 16px);
     padding: 8px 8px;
+    width: 55%;
+}
+
+.js-find {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.fa-magnifying-glass {
+    position: fixed;
+}
+
+.btnSearch {
+    width: 4%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .col {
     display: flex;
     position: fixed;
-    width: calc(60%);
     background-color: #ccc;
     height: 100px;
+    width: 60%;
     border-block-start: solid 16px #ccc ;
     padding: 0 8px;
 }
