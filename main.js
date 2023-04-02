@@ -141,11 +141,20 @@ function handleOption() {
     btnUpdate.onclick = () =>{
         const id = userCurr.id
 
-        const name = document.getElementById('fullName1').value
-        const role = document.getElementById('role1').value
-        const email = document.getElementById('email1').value
-        const slogan = document.getElementById('slogan1').value
-        const image = document.getElementById('image1').value
+        const index = userCurr.dataset.index
+
+        var name = document.getElementById('fullName1').value
+        var role = document.getElementById('role1').value
+        var email = document.getElementById('email1').value
+        var slogan = document.getElementById('slogan1').value
+        var image = document.getElementById('image1').value
+
+        if (name ==='') name = listUsersCurr[index].name
+        if (email === '') email = listUsersCurr[index].link
+        if (role === '') role = listUsersCurr[index].role
+        if (slogan === '') slogan = listUsersCurr[index].slogan
+        if (image === '') image = listUsersCurr[index].image
+
 
         const data = {
             img: image,
@@ -154,6 +163,8 @@ function handleOption() {
             link: email,
             slogan: slogan,
         }
+
+        console.log(data)
         updateUser(data, id, function(){
             getUser(listTableUsers)
             overlay_2.classList.remove('open')
