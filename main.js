@@ -4,11 +4,12 @@ const imgMin = document.querySelector('.img')
 const information = document.querySelector('.infor')
 
 
-var userCurr;
+var userCurr, listUsersCurr;
 
 
 // render list of users
 function listTableUsers(users) {
+    listUsersCurr = users
     var html = users.map(  (user, index) =>{
         return `
         <div class="users" id="${user.id}" data-index="${index}">
@@ -29,42 +30,45 @@ function handleRenderInfo (users) {
         userCurr = e.target.closest('.users')
 
         var profile = users[userCurr.dataset.index]
-
-        var html = [
-            `
-            <div class="">
-                <div class="avt"> </div>
-                <div class="name">${profile.name}</div>
-            </div>
-
-            <div class="css-pad">
-                <div class="">
-                    <i class="fa-solid fa-envelope"></i>
-                    Email
-                </div>
-            <div class="content">${profile.link}</div>
-            </div>
-
-            <div class="css-pad">
-                <div class="">
-                    <i class="fa-solid fa-envelope"></i>
-                    Slogan
-                </div>
-                <div class="content">${profile.slogan}</div>
-            </div>
-
-            <div class="css-pad">
-                <div class=""> 
-                    <i class="fa-solid fa-shield"></i>
-                    Roles
-                </div>
-                <div class="content">${profile.role}</div>
-            </div>
-        `]
-        information.innerHTML = html.join('')
-        const avt = document.querySelector('.avt')
-        avt.style.backgroundImage = `url(${profile.img})`
+        renderInfo(profile)
     } 
+}
+
+function renderInfo(profile) {
+    var html = [
+        `
+        <div class="">
+            <div class="avt"> </div>
+            <div class="name">${profile.name}</div>
+        </div>
+
+        <div class="css-pad">
+            <div class="">
+                <i class="fa-solid fa-envelope"></i>
+                Email
+            </div>
+        <div class="content">${profile.link}</div>
+        </div>
+
+        <div class="css-pad">
+            <div class="">
+                <i class="fa-solid fa-envelope"></i>
+                Slogan
+            </div>
+            <div class="content">${profile.slogan}</div>
+        </div>
+
+        <div class="css-pad">
+            <div class=""> 
+                <i class="fa-solid fa-shield"></i>
+                Roles
+            </div>
+            <div class="content">${profile.role}</div>
+        </div>
+    `]
+    information.innerHTML = html.join('')
+    const avt = document.querySelector('.avt')
+    avt.style.backgroundImage = `url(${profile.img})`
 }
 
 
@@ -196,8 +200,15 @@ function updateUser(data, id, callback) {
 
 
 function handleFindUser() {
-    
-   
+    const btnSearch = document.querySelector('.btnSearch')
+    btnSearch.onclick = () =>{
+        const userFind = document.querySelector('.find ').value
+        listUsersCurr.map((user) =>{
+            if( user.name === userFind) {
+                renderInfo(user)
+            }
+        })
+    }
 }
 
    
